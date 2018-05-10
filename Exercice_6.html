@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercice_7</title>
+        <title>Exercice_6</title>
         <meta charset="UTF-8">
     </head>
     <body>
-
+    <form name="form1">
+        <label for="votre_age">Votre age : </label>
+        <input type="text" id="votre_age" name="votre_age" value=""/>
+        <button id="valider" name ="valider" onClick="controle(form1)">Valider</button>
+    </form>
+    <script type="text/javascript">
+        var VotreAge = "Mineur ou Majeur";
+        function controle(form1) {
+            if (document.form1.votre_age.value >= 18) {
+                VotreAge =  "Vous êtes majeur";
+            }
+            else {
+                VotreAge = "Vous êtes mineur";
+            }
+            document.write(VotreAge);
+        }
+    </script>
     <body>
 </html>
